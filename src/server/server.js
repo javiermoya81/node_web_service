@@ -1,9 +1,11 @@
 // Aqui va la configuración del servidor
 
-const express = require('express')
-const path = require('path') // propio de node permite leer las carpetas del proyecto
+// const express = require('express')
+// const path = require('path')
+import express from 'express'
+import path from 'path' // propio de node permite leer las carpetas del proyecto
 
-const startServer = (options) => {
+export const startServer = (options) => {
     const {port, public_path= 'public'} = options // esto se recibe desde app.js
     
     const app = express() //ejecutamos express para tener disponibles todos los middlewares
@@ -21,6 +23,6 @@ const startServer = (options) => {
     })
 }
 
-module.exports = {
-    startServer
-}
+// module.exports = {
+//     startServer
+// } forma anterior a es6

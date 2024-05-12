@@ -1,6 +1,8 @@
 // ARCHIVO PRINCIPAL
-const {envs} = require('./config/env') // traemos las variables de entorno configuradas en config/env.js
-const {startServer} = require('./server/server') // traemos el servidor
+// const {envs} = require('./config/env')
+// const {startServer} = require('./server/server') 
+import {envs} from './config/env.js' // traemos las variables de entorno configuradas en config/env.js
+import {startServer} from './server/server.js' // traemos el servidor
 
 const options = {
     port: envs.PORT,
